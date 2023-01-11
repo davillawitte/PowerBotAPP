@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { ApiService } from './api.service';
 
+interface SideNavToggle {
+  screenWidth: number;
+  collapsed: boolean;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,9 +14,14 @@ import { ApiService } from './api.service';
 export class AppComponent {
   title = 'PowerBotAPP';
 
-  // ngOnInit()void{
+  isSideNavCollapsed = false;
+  screenWidth = 0;
 
-  // }
+  onToggleSideNav(data: SideNavToggle): void {
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
+
   users: any;
   constructor(private apiservice: ApiService){}
 

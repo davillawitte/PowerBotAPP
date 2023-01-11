@@ -1,14 +1,8 @@
-<!-- <div class="jumbotron">
-  <div class="container">
-    <h1 class="display-3">Gerenciador de Delivery
-    </h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-  </div>
-</div>
+<h1>Gerenciador de Pedidos</h1>
+<p><em>Pedidos em aberto</em></p>
+<hr>
 
-
-<div class="shadow-sm p-3 mb-5 bg-white rounded pt-3 px-4">
+<div class="shadow-lg p-3 mb-5 bg-white rounded pt-3 px-4">
   <div class="d-flex">
     <div class="input-group mb-2">
       <div class="table-responsive">
@@ -38,9 +32,12 @@
               <td>{{user.localizacao}}</td>
               <td>{{user.horario}}</td>
               <td>{{user.status}}</td>
-              <td>
-                <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir">
+              <td class="d-flex justify-content-between">
+                <button (click)="removeUser(user.id)" type="button" class="btn btn-danger btn-sm col ml-2" tooltip="Excluir">
                   <i class="fa fa-trash"></i>
+                </button>
+                <button type="button" class="btn btn-dark btn-sm col ml-2" tooltip="Editar">
+                  <i class="fa fa-edit"></i>
                 </button>
               </td>
             </tr>
@@ -58,4 +55,4 @@
     <button type="button" class="btn btn-primary">Não</button>
   </div>
 </ng-template>
- -->
+
