@@ -12,6 +12,7 @@ import { CdkMenuModule } from '@angular/cdk/menu';
 import { BodyComponent } from './body/body.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProdutosComponent } from './produtos/produtos.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { ProdutosComponent } from './produtos/produtos.component'
     HttpClientModule,
     BrowserAnimationsModule,
     OverlayModule,
-    CdkMenuModule
+    CdkMenuModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

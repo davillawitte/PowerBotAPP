@@ -22,4 +22,9 @@ export class ApiService {
     return this._http.delete(`${this.apiUrl}/${id}`);
   }
 
+  //Create New User
+  createNewUser(data:any): Observable<any>{
+    return this._http.post(`${this.apiUrl}`, data);
+  }
+
 }
